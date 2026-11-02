@@ -1,7 +1,7 @@
 FROM php:8.3-apache
 
 RUN apt-get update && apt-get install -y \
-    git unzip libzip-dev libonig-dev \
+    git unzip libzip-dev libonig-dev libsqlite3-dev \
     && docker-php-ext-install \
     pdo_mysql pdo_sqlite mbstring bcmath exif pcntl zip \
     && a2enmod rewrite \
